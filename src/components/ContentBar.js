@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Card from './Card';
-import Sidebar from './Sidebar'
+import Sidebar from './Sidebar2'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -16,12 +16,12 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function VariableWidthGrid() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={3}>
+    <Box sx={{ flexGrow: 2 }}>
+      <Grid container spacing={4}>
         <Grid item xs={2}>
           <Item><Sidebar/></Item>
         </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={3}>
           <Item>
             <Card/>
             <Card/>
@@ -29,7 +29,15 @@ export default function VariableWidthGrid() {
             <Card/>
           </Item>
         </Grid>
-        <Grid item xs ={5}>
+        <Grid item xs ={3}>
+        <Item>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+          </Item>
+        </Grid>
+        <Grid item xs ={3}>
         <Item>
             <Card/>
             <Card/>
